@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC02609F-DF55-4F83-9033-5647B64ECCF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AWSWINSDK</RootNamespace>
+    <AssemblyName>AWSWINSDK</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AWSWP7SDK\Amazon.Runtime\AWSCredentials.cs">
+      <Link>Amazon.Runtime\AWSCredentials.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.Runtime\ConfigurationManager.cs">
+      <Link>Amazon.Runtime\ConfigurationManager.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.Runtime\Internal\Util\Logger.cs">
+      <Link>Amazon.Runtime\Internal\Util\Logger.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.Runtime\Internal\Util\StringUtils.cs">
+      <Link>Amazon.Runtime\Internal\Util\StringUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\AmazonS3.cs">
+      <Link>Amazon.S3\AmazonS3.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\AmazonS3Client.cs">
+      <Link>Amazon.S3\AmazonS3Client.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\AmazonS3Config.cs">
+      <Link>Amazon.S3\AmazonS3Config.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\AmazonS3Exception.cs">
+      <Link>Amazon.S3\AmazonS3Exception.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\IS3Response.cs">
+      <Link>Amazon.S3\IS3Response.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\CopyObjectRequest.cs">
+      <Link>Amazon.S3\Model\CopyObjectRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\CopyObjectResponse.cs">
+      <Link>Amazon.S3\Model\CopyObjectResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\DeleteBucketPolicyRequest.cs">
+      <Link>Amazon.S3\Model\DeleteBucketPolicyRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\DeleteBucketPolicyResponse.cs">
+      <Link>Amazon.S3\Model\DeleteBucketPolicyResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\DeleteBucketRequest.cs">
+      <Link>Amazon.S3\Model\DeleteBucketRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\DeleteBucketResponse.cs">
+      <Link>Amazon.S3\Model\DeleteBucketResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\DeleteObjectRequest.cs">
+      <Link>Amazon.S3\Model\DeleteObjectRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\DeleteObjectResponse.cs">
+      <Link>Amazon.S3\Model\DeleteObjectResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\DisableBucketLoggingRequest.cs">
+      <Link>Amazon.S3\Model\DisableBucketLoggingRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\DisableBucketLoggingResponse.cs">
+      <Link>Amazon.S3\Model\DisableBucketLoggingResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\EnableBucketLoggingRequest.cs">
+      <Link>Amazon.S3\Model\EnableBucketLoggingRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\EnableBucketLoggingResponse.cs">
+      <Link>Amazon.S3\Model\EnableBucketLoggingResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetACLRequest.cs">
+      <Link>Amazon.S3\Model\GetACLRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetACLResponse.cs">
+      <Link>Amazon.S3\Model\GetACLResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetBucketLocationRequest.cs">
+      <Link>Amazon.S3\Model\GetBucketLocationRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetBucketLocationResponse.cs">
+      <Link>Amazon.S3\Model\GetBucketLocationResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetBucketLoggingRequest.cs">
+      <Link>Amazon.S3\Model\GetBucketLoggingRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetBucketLoggingResponse.cs">
+      <Link>Amazon.S3\Model\GetBucketLoggingResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetBucketPolicyRequest.cs">
+      <Link>Amazon.S3\Model\GetBucketPolicyRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetBucketPolicyResponse.cs">
+      <Link>Amazon.S3\Model\GetBucketPolicyResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetObjectMetadataRequest.cs">
+      <Link>Amazon.S3\Model\GetObjectMetadataRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetObjectMetadataResponse.cs">
+      <Link>Amazon.S3\Model\GetObjectMetadataResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetObjectRequest.cs">
+      <Link>Amazon.S3\Model\GetObjectRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetObjectResponse.cs">
+      <Link>Amazon.S3\Model\GetObjectResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\GetPreSignedUrlRequest.cs">
+      <Link>Amazon.S3\Model\GetPreSignedUrlRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\ListBucketsRequest.cs">
+      <Link>Amazon.S3\Model\ListBucketsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\ListBucketsResponse.cs">
+      <Link>Amazon.S3\Model\ListBucketsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\ListObjectsRequest.cs">
+      <Link>Amazon.S3\Model\ListObjectsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\ListObjectsResponse.cs">
+      <Link>Amazon.S3\Model\ListObjectsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\Owner.cs">
+      <Link>Amazon.S3\Model\Owner.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\PutBucketPolicyRequest.cs">
+      <Link>Amazon.S3\Model\PutBucketPolicyRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\PutBucketPolicyResponse.cs">
+      <Link>Amazon.S3\Model\PutBucketPolicyResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\PutBucketRequest.cs">
+      <Link>Amazon.S3\Model\PutBucketRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\PutBucketResponse.cs">
+      <Link>Amazon.S3\Model\PutBucketResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\PutObjectRequest.cs">
+      <Link>Amazon.S3\Model\PutObjectRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\PutObjectResponse.cs">
+      <Link>Amazon.S3\Model\PutObjectResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\ResponseHeaderOverrides.cs">
+      <Link>Amazon.S3\Model\ResponseHeaderOverrides.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\S3AccessControlList.cs">
+      <Link>Amazon.S3\Model\S3AccessControlList.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\S3Bucket.cs">
+      <Link>Amazon.S3\Model\S3Bucket.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\S3BucketLoggingConfig.cs">
+      <Link>Amazon.S3\Model\S3BucketLoggingConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\S3Enumerations.cs">
+      <Link>Amazon.S3\Model\S3Enumerations.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\S3Error.cs">
+      <Link>Amazon.S3\Model\S3Error.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\S3Grant.cs">
+      <Link>Amazon.S3\Model\S3Grant.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\S3Grantee.cs">
+      <Link>Amazon.S3\Model\S3Grantee.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\S3Object.cs">
+      <Link>Amazon.S3\Model\S3Object.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\S3Request.cs">
+      <Link>Amazon.S3\Model\S3Request.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\S3Response.cs">
+      <Link>Amazon.S3\Model\S3Response.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\SetACLRequest.cs">
+      <Link>Amazon.S3\Model\SetACLRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\SetACLResponse.cs">
+      <Link>Amazon.S3\Model\SetACLResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\TransferProgressArgs.cs">
+      <Link>Amazon.S3\Model\TransferProgressArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Model\Tuple.cs">
+      <Link>Amazon.S3\Model\Tuple.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Util\AmazonS3Util.cs">
+      <Link>Amazon.S3\Util\AmazonS3Util.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.S3\Util\S3Constants.cs">
+      <Link>Amazon.S3\Util\S3Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\AmazonSimpleDB.cs">
+      <Link>Amazon.SimpleDB\AmazonSimpleDB.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\AmazonSimpleDBClient.cs">
+      <Link>Amazon.SimpleDB\AmazonSimpleDBClient.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\AmazonSimpleDBConfig.cs">
+      <Link>Amazon.SimpleDB\AmazonSimpleDBConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\AmazonSimpleDBException.cs">
+      <Link>Amazon.SimpleDB\AmazonSimpleDBException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\ISimpeDBResponse.cs">
+      <Link>Amazon.SimpleDB\ISimpeDBResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\Attribute.cs">
+      <Link>Amazon.SimpleDB\Model\Attribute.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\BatchDeleteAttributesRequest.cs">
+      <Link>Amazon.SimpleDB\Model\BatchDeleteAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\BatchDeleteAttributesResponse.cs">
+      <Link>Amazon.SimpleDB\Model\BatchDeleteAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\BatchPutAttributesRequest.cs">
+      <Link>Amazon.SimpleDB\Model\BatchPutAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\BatchPutAttributesResponse.cs">
+      <Link>Amazon.SimpleDB\Model\BatchPutAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\CreateDomainRequest.cs">
+      <Link>Amazon.SimpleDB\Model\CreateDomainRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\CreateDomainResponse.cs">
+      <Link>Amazon.SimpleDB\Model\CreateDomainResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\DeleteableItem.cs">
+      <Link>Amazon.SimpleDB\Model\DeleteableItem.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\DeleteAttributesRequest.cs">
+      <Link>Amazon.SimpleDB\Model\DeleteAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\DeleteAttributesResponse.cs">
+      <Link>Amazon.SimpleDB\Model\DeleteAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\DeleteDomainRequest.cs">
+      <Link>Amazon.SimpleDB\Model\DeleteDomainRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\DeleteDomainResponse.cs">
+      <Link>Amazon.SimpleDB\Model\DeleteDomainResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\DomainMetadataRequest.cs">
+      <Link>Amazon.SimpleDB\Model\DomainMetadataRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\DomainMetadataResponse.cs">
+      <Link>Amazon.SimpleDB\Model\DomainMetadataResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\DomainMetadataResult.cs">
+      <Link>Amazon.SimpleDB\Model\DomainMetadataResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\Error.cs">
+      <Link>Amazon.SimpleDB\Model\Error.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\ErrorResponse.cs">
+      <Link>Amazon.SimpleDB\Model\ErrorResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\GetAttributesRequest.cs">
+      <Link>Amazon.SimpleDB\Model\GetAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\GetAttributesResponse.cs">
+      <Link>Amazon.SimpleDB\Model\GetAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\GetAttributesResult.cs">
+      <Link>Amazon.SimpleDB\Model\GetAttributesResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\Item.cs">
+      <Link>Amazon.SimpleDB\Model\Item.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\ListDomainsRequest.cs">
+      <Link>Amazon.SimpleDB\Model\ListDomainsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\ListDomainsResponse.cs">
+      <Link>Amazon.SimpleDB\Model\ListDomainsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\ListDomainsResult.cs">
+      <Link>Amazon.SimpleDB\Model\ListDomainsResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\PutAttributesRequest.cs">
+      <Link>Amazon.SimpleDB\Model\PutAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\PutAttributesResponse.cs">
+      <Link>Amazon.SimpleDB\Model\PutAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\ReplaceableAttribute.cs">
+      <Link>Amazon.SimpleDB\Model\ReplaceableAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\ReplaceableItem.cs">
+      <Link>Amazon.SimpleDB\Model\ReplaceableItem.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\ResponseMetadata.cs">
+      <Link>Amazon.SimpleDB\Model\ResponseMetadata.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\SelectRequest.cs">
+      <Link>Amazon.SimpleDB\Model\SelectRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\SelectResponse.cs">
+      <Link>Amazon.SimpleDB\Model\SelectResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\SelectResult.cs">
+      <Link>Amazon.SimpleDB\Model\SelectResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\SimpleDBResponse.cs">
+      <Link>Amazon.SimpleDB\Model\SimpleDBResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Model\UpdateCondition.cs">
+      <Link>Amazon.SimpleDB\Model\UpdateCondition.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SimpleDB\Util\AmazonSimpleDBUtil.cs">
+      <Link>Amazon.SimpleDB\Util\AmazonSimpleDBUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\AmazonSQSClient.cs">
+      <Link>Amazon.SQS\AmazonSQSClient.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\AmazonSQSConfig.cs">
+      <Link>Amazon.SQS\AmazonSQSConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\AmazonSQSException.cs">
+      <Link>Amazon.SQS\AmazonSQSException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\IAmazonSQS.cs">
+      <Link>Amazon.SQS\IAmazonSQS.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\ISQSResponse.cs">
+      <Link>Amazon.SQS\ISQSResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\AddPermissionRequest.cs">
+      <Link>Amazon.SQS\Model\AddPermissionRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\AddPermissionResponse.cs">
+      <Link>Amazon.SQS\Model\AddPermissionResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\Attribute.cs">
+      <Link>Amazon.SQS\Model\Attribute.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\ChangeMessageVisibilityRequest.cs">
+      <Link>Amazon.SQS\Model\ChangeMessageVisibilityRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\ChangeMessageVisibilityResponse.cs">
+      <Link>Amazon.SQS\Model\ChangeMessageVisibilityResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\CreateQueueRequest.cs">
+      <Link>Amazon.SQS\Model\CreateQueueRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\CreateQueueResponse.cs">
+      <Link>Amazon.SQS\Model\CreateQueueResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\CreateQueueResult.cs">
+      <Link>Amazon.SQS\Model\CreateQueueResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\DeleteMessageRequest.cs">
+      <Link>Amazon.SQS\Model\DeleteMessageRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\DeleteMessageResponse.cs">
+      <Link>Amazon.SQS\Model\DeleteMessageResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\DeleteQueueRequest.cs">
+      <Link>Amazon.SQS\Model\DeleteQueueRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\DeleteQueueResponse.cs">
+      <Link>Amazon.SQS\Model\DeleteQueueResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\Error.cs">
+      <Link>Amazon.SQS\Model\Error.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\ErrorResponse.cs">
+      <Link>Amazon.SQS\Model\ErrorResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\GetQueueAttributesRequest.cs">
+      <Link>Amazon.SQS\Model\GetQueueAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\GetQueueAttributesResponse.cs">
+      <Link>Amazon.SQS\Model\GetQueueAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\GetQueueAttributesResult.cs">
+      <Link>Amazon.SQS\Model\GetQueueAttributesResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\ListQueuesRequest.cs">
+      <Link>Amazon.SQS\Model\ListQueuesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\ListQueuesResponse.cs">
+      <Link>Amazon.SQS\Model\ListQueuesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\ListQueuesResult.cs">
+      <Link>Amazon.SQS\Model\ListQueuesResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\Message.cs">
+      <Link>Amazon.SQS\Model\Message.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\ReceiveMessageRequest.cs">
+      <Link>Amazon.SQS\Model\ReceiveMessageRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\ReceiveMessageResponse.cs">
+      <Link>Amazon.SQS\Model\ReceiveMessageResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\ReceiveMessageResult.cs">
+      <Link>Amazon.SQS\Model\ReceiveMessageResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\RemovePermissionRequest.cs">
+      <Link>Amazon.SQS\Model\RemovePermissionRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\RemovePermissionResponse.cs">
+      <Link>Amazon.SQS\Model\RemovePermissionResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\ResponseMetadata.cs">
+      <Link>Amazon.SQS\Model\ResponseMetadata.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\SendMessageRequest.cs">
+      <Link>Amazon.SQS\Model\SendMessageRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\SendMessageResponse.cs">
+      <Link>Amazon.SQS\Model\SendMessageResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\SendMessageResult.cs">
+      <Link>Amazon.SQS\Model\SendMessageResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\SetQueueAttributesRequest.cs">
+      <Link>Amazon.SQS\Model\SetQueueAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\SetQueueAttributesResponse.cs">
+      <Link>Amazon.SQS\Model\SetQueueAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.SQS\Model\SQSBaseResponse.cs">
+      <Link>Amazon.SQS\Model\SQSBaseResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\Amazon.Util\AWSSDKUtils.cs">
+      <Link>Amazon.Util\AWSSDKUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSWP7SDK\AWSClientFactory.cs">
+      <Link>AWSClientFactory.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
